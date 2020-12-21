@@ -24,7 +24,7 @@ stage ('Build1')
        sh "cd /home/naga/node/Angular-JumpStart ; sudo apt-get install nodejs "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo npm install -g @angular/cli@11.0.5 -y "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo ng build  "
-       sh "cd /home/naga/node/Angular-JumpStart ; sudo npm start "
+       sh "cd /home/naga/node/Angular-JumpStart/ ; sudo npm start "
     }
 }
 stage ('copymodule')
