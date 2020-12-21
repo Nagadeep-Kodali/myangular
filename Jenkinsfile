@@ -22,7 +22,7 @@ stage ('Build1')
        sh "cd /home/naga ; sudo apt-get update "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo apt-get install nodejs "
-       sh "cd /home/naga/node/Angular-JumpStart ; sudo npm install -g @angular/cli@6.0.0 -y "
+       sh "cd /home/naga/node/Angular-JumpStart ; sudo npm install -g @angular/cli@11.0.5 -y "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo ng build  "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo npm start "
     }
