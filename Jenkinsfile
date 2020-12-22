@@ -25,14 +25,8 @@ stage ('Build1')
        sh "cd /home/naga/node/Angular-JumpStart ; sudo npm install -g @angular/cli@11.0.0 -y"
        sh "cd /home/naga/node/Angular-JumpStart ; sudo ng build "
        sh "cd /home/naga/node/Angular-JumpStart ; sudo npm start "
+       sh "cd /home/naga ; sudo ansible-playbook copy.yml "
     }
-}
-stage ('Build2')
-    { 
-        steps 
-            {
-           sh "cd /home/naga ; sudo ansible-playbook copy.yml "
-            }
 }
 stage ('angulardeployment')
     { 
