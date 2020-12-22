@@ -27,12 +27,20 @@ stage ('Build1')
        sh "cd /home/naga/node/Angular-JumpStart ; sudo npm start "
     }
 }
-stage ('copymodule')
+stage ('Build2')
     { 
         steps 
             {
-           sh " sudo ansible-playbook /home/naga/copy.yml"
+           sh "cd /home/naga ; sudo ansible-playbook copy.yml "
             }
+}
+stage ('angulardeployment')
+    { 
+        steps {
+            node ('nginxserver') {
+           sh "cd /home/root ; sudo systemctl restart nginx "
+     }
+}
 }
 }
 }
