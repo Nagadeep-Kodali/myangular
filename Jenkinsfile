@@ -31,7 +31,7 @@ stage ('angulardeployment')
     { 
         steps {
             node ('nginxserver') {
-           sh "cd /root ; sudo systemctl restart nginx "
+           sh "cd /home/naga ; sudo systemctl restart nginx "
     }
 }
 }
